@@ -1,0 +1,26 @@
+@use './todoapp';
+@use './todo';
+@use './filter';
+
+iframe {
+  display: none;
+}
+
+body {
+  min-width: 230px;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.notification {
+  min-height: 36px;
+  transition-duration: 1s;
+  transition-property: opacity, min-height;
+}
+
+.notification.hidden {
+  pointer-events: none;
+  min-height: 0;
+  opacity: 0;
+}
+
